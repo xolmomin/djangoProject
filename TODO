@@ -1,0 +1,77 @@
+python3 manage.py runserver
+python3 manage.py startapp apps
+python3 manage.py createsuperuser
+
+python3 manage.py makemessages
+python3 manage.py compilemessages --ignore=.venv
+
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+
+
+docker run \
+  -p 9000:9000 \
+  -p 9001:9001 \
+  -e MINIO_ROOT_USER=admin \
+  -e MINIO_ROOT_PASSWORD=12345678 \
+  quay.io/minio/minio server /data --console-address ":9001"
+
+
+
+
+
+github + linkedin + leetcode
+
+github open source
+
+
+django + aiogram + redis + nginx(load balance)
+
+
+aiohttp aiogram + sqlalchemy(asyncpg) + redis + nginx(load balance)
+
+
+
+aiohttp -> starlette -> fastapi -> flask -> django
+
+3 en, uz, ko
+
+
+
+1) Product(name, price, description)
+django admin (uz)
+
+
+2) django jazzmin(multi lang chiqadigan qilish kk)
+
+
+
+django rosetta (static)
+
+django parler (dynamic)
+
+
+isort, flake8
+
+
+
+static i18n
+dynamic i18n
+jinja2 + i18n
+
+
+rest + i18n
+
+using django orm out of django
+
+
+python3 manage.py makemessages -l uz -l en -l ko
+python3 manage.py compilemessages --ignore=.venv
+
+
+
+
+https://bootdey.com/snippets/view/blog-list-page
+https://bootdey.com/snippets/view/blog-detail-page

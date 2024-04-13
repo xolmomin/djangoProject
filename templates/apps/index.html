@@ -1,0 +1,39 @@
+{% load i18n %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<h4>{% translate 'hello' %}</h4>
+<h4>{% trans 'first_name' %}</h4>
+
+
+<div>
+    {% get_current_language as CURRENT_LANGUAGE %}
+    {% get_available_languages as AVAILABLE_LANGUAGES %}
+    {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+    <div class="languages">
+        <p>{% trans "Language" %}:</p>
+        <ul class="languages">
+            {% for language in languages %}
+                <li>
+                    <a href="/{{ language.code }}/"
+                            {% if language.code == CURRENT_LANGUAGE %} class="active"{% endif %}>
+                        {{ language.name_local }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+</body>
+</html>
