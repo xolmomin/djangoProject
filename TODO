@@ -29,12 +29,14 @@ github open source
 
 django + aiogram + redis + nginx(load balance)
 
+postgres, postgres
+django, aiogram + sqlalchemy(asyncpg)
 
-aiohttp aiogram + sqlalchemy(asyncpg) + redis + nginx(load balance)
-
+fastapi + aiogram + sqlalchemy(asyncpg)
 
 
 aiohttp -> starlette -> fastapi -> flask -> django
+20%        30%          40%        60%      100%
 
 3 en, uz, ko
 
@@ -63,15 +65,24 @@ jinja2 + i18n
 
 
 rest + i18n
+category(name), product(title, description)
+
 
 using django orm out of django
+django + aiogram
 
 
 python3 manage.py makemessages -l uz -l en -l ko
 python3 manage.py compilemessages --ignore=.venv
 
 
-
-
 https://bootdey.com/snippets/view/blog-list-page
 https://bootdey.com/snippets/view/blog-detail-page
+
+
+
+
+
+
+
+
